@@ -1,0 +1,1 @@
+export const BaseApiUrl = 'https://api_url_here';

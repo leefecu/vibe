@@ -1,0 +1,1 @@
+export { watchFetchPlaylists } from './fetchPlaylists';
