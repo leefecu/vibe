@@ -1,9 +1,13 @@
 import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import { render } from 'react-dom';
+import Modal from 'react-modal';
+
 import configStore from './common/configStore';
 import routeConfig from './common/routeConfig';
 import Root from './Root';
+
+Modal.setAppElement('#root');
 
 const store = configStore();
 

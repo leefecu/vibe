@@ -1,4 +1,5 @@
 @import '../../styles/mixins';
+@import '../../styles/color';
 
 .home-default-page {
   text-align: center;
@@ -74,4 +75,20 @@
       transform: rotate(360deg);
     }
   }
+}
+
+.modal {
+  background-color: $white;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  width: 100%;
+}
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
