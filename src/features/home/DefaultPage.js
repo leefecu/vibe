@@ -66,17 +66,28 @@ export class DefaultPage extends Component {
             overlayClassName="modal-overlay"
           >
             <Tabs>
-              <TabList>
-                <Tab>Content</Tab>
-                <Tab>Location</Tab>
-                <Tab>Link</Tab>
+              <TabList className="tab-list">
+                <Tab className="tab" selectedClassName="selected-tab">
+                  Content
+                </Tab>
+                <Tab className="tab" selectedClassName="selected-tab">
+                  Location
+                </Tab>
+                <Tab className="tab" selectedClassName="selected-tab">
+                  Link
+                </Tab>
               </TabList>
 
               <TabPanel>
                 <div>Content</div>
               </TabPanel>
               <TabPanel>
-                <LocationForm latitude={latitude} longitude={longitude} useLatLng={useLatLng} locationOptions={locations} />
+                <LocationForm
+                  latitude={latitude}
+                  longitude={longitude}
+                  useLatLng={useLatLng}
+                  locationOptions={locations}
+                />
               </TabPanel>
               <TabPanel>
                 <div>Link</div>
