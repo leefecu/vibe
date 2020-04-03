@@ -1,8 +1,11 @@
+@import './color.scss';
+@import './fonts.scss';
 @import './mixins';
 
 // Here you put all global css rules.
 
 body {
+  color: $default-font-color;
   margin: 0;
   padding: 0;
   font-family: sans-serif;

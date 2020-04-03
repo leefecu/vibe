@@ -1,0 +1,24 @@
+@import '../../../../styles/global';
+
+.text-input {
+  .label {
+    color: $text-input-label-color;
+    font-size: $input-label-size;
+    margin-bottom: 5px;
+  }
+  input.input {
+    border: 0;
+    border-bottom: 2px solid $grey3;
+    color: $default-font-color;
+    font-size: $input-font-size;
+    outline: none;
+    padding: 5px 0;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    &::placeholder {
+      color: $grey3;
+    }
+  }
+}

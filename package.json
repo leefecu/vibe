@@ -122,6 +122,7 @@
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
+    "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^5.3.18",
     "rekit-plugin-redux-saga": "^1.0.0"
   }
