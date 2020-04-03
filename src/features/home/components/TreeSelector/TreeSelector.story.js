@@ -5,7 +5,7 @@ import TreeSelector from './TreeSelector';
 
 import * as styles from '../../../../styles/story';
 
-import { getLocations } from '../../../../common/apiSimulator';
+import { Locations } from '../../../../__fixtures__/data';
 
 export default {
   title: 'Components | Tree Selector',
@@ -15,7 +15,7 @@ export default {
 export const Default = () => (
   <div style={styles.modalContainer}>
     <TreeSelector
-      options={getLocations()}
+      options={Locations}
       onSelected={action('selected')}
       onClearAll={action('clear all')}
       onSelectAll={action('select all')}

@@ -1,0 +1,1 @@
+export { watchFetchLocations } from './fetchLocation';

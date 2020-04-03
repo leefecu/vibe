@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import Modal from 'react-modal';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
+import LocationForm from './forms/LocationForm/LocationForm'
+
 import reactLogo from '../../images/react-logo.svg';
 import rekitLogo from '../../images/rekit-logo.svg';
 
@@ -21,6 +23,11 @@ export class DefaultPage extends Component {
     modalIsOpen: false,
   };
 
+  componentDidMount() {
+    // fetch data from server
+    this.props.actions.fetchLocations();
+  }
+
   closeModal = () => {
     this.setState({ modalIsOpen: false })
   }
@@ -30,6 +37,14 @@ export class DefaultPage extends Component {
   }
 
   render() {
+    const {
+      locationData: {
+        latitude,
+        longitude,
+        useLatLng,
+        locations,
+      },
+    } = this.props;
     const { modalIsOpen } = this.state
     return (
       <div className="home-default-page">
@@ -61,7 +76,7 @@ export class DefaultPage extends Component {
                 <div>Content</div>
               </TabPanel>
               <TabPanel>
-                <div>Location</div>
+                <LocationForm latitude={latitude} longitude={longitude} useLatLng={useLatLng} locationOptions={locations} />
               </TabPanel>
               <TabPanel>
                 <div>Link</div>
@@ -77,7 +92,7 @@ export class DefaultPage extends Component {
 /* istanbul ignore next */
 function mapStateToProps(state) {
   return {
-    home: state.home,
+    locationData: state.home.locationData,
   };
 }
 

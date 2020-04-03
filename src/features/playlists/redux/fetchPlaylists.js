@@ -6,7 +6,7 @@ import {
   PLAYLISTS_FETCH_PLAYLISTS_FAILURE,
   PLAYLISTS_FETCH_PLAYLISTS_DISMISS_ERROR,
 } from './constants';
-import { BaseApiUrl } from '../common';
+import { BaseApiUrl } from '../../../common/config'
 
 //simulator - start
 import { SimulatorMode } from '../../../common/global';

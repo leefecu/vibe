@@ -1,7 +1,7 @@
 import initialState from './initialState';
+import { reducer as fetchLocationsReducer } from './fetchLocation';
 
-const reducers = [
-];
+const reducers = [fetchLocationsReducer];
 
 export default function reducer(state = initialState, action) {
   let newState;
@@ -11,6 +11,5 @@ export default function reducer(state = initialState, action) {
       newState = state;
       break;
   }
-  /* istanbul ignore next */
   return reducers.reduce((s, r) => r(s, action), newState);
 }

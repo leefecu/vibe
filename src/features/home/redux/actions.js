@@ -1,0 +1,1 @@
+export { fetchLocations } from './fetchLocation';

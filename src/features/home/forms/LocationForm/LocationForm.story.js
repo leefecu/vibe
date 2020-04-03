@@ -4,7 +4,7 @@ import LocationForm from './LocationForm';
 
 import * as styles from '../../../../styles/story';
 
-import { getLocations } from '../../../../common/apiSimulator';
+import { Locations } from '../../../../__fixtures__/data';
 
 export default {
   title: 'Forms | Location Form',
@@ -17,7 +17,7 @@ export const EmptyForm = () => (
       latitude={-36.745393}
       longitude={174.697275}
       useLatLng={true}
-      locationOptions={getLocations()}
+      locationOptions={Locations}
     />
   </div>
 );

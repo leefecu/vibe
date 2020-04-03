@@ -1,0 +1,6 @@
+const prefix = 'HOME_';
+
+export const FETCH_LOCATIONS_BEGIN = `${prefix}FETCH_LOCATIONS_BEGIN`;
+export const FETCH_LOCATIONS_SUCCESS = `${prefix}FETCH_LOCATIONS_SUCCESS`;
+export const FETCH_LOCATIONS_FAILUER = `${prefix}FETCH_LOCATIONS_FAILUER`;
+export const UPDATE_LOCATION_DATA = `${prefix}UPDATE_LOCATION_DATA`;
