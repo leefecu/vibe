@@ -9,6 +9,9 @@ import LocationForm from './forms/LocationForm/LocationForm'
 
 import reactLogo from '../../images/react-logo.svg';
 import rekitLogo from '../../images/rekit-logo.svg';
+import EditIcon from '../../assets/icons/Edit';
+import LinkIcon from '../../assets/icons/Link';
+import MapMarker from '../../assets/icons/MapMarker';
 
 import * as actions from './redux/actions';
 
@@ -66,17 +69,28 @@ export class DefaultPage extends Component {
             overlayClassName="modal-overlay"
           >
             <Tabs>
-              <TabList>
-                <Tab>Content</Tab>
-                <Tab>Location</Tab>
-                <Tab>Link</Tab>
+              <TabList className="tab-list">
+                <Tab className="tab" selectedClassName="selected-tab">
+                  <EditIcon width={24} height={24} />
+                </Tab>
+                <Tab className="tab" selectedClassName="selected-tab">
+                  <MapMarker fill="white" width={15} height={21} />
+                </Tab>
+                <Tab className="tab" selectedClassName="selected-tab">
+                  <LinkIcon width={24} height={24} />
+                </Tab>
               </TabList>
 
               <TabPanel>
                 <div>Content</div>
               </TabPanel>
               <TabPanel>
-                <LocationForm latitude={latitude} longitude={longitude} useLatLng={useLatLng} locationOptions={locations} />
+                <LocationForm
+                  latitude={latitude}
+                  longitude={longitude}
+                  useLatLng={useLatLng}
+                  locationOptions={locations}
+                />
               </TabPanel>
               <TabPanel>
                 <div>Link</div>
