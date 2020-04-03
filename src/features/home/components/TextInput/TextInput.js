@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 
 import './TextInput.scss';
 
-export interface Props {
-  defaultValue?: string;
-  id: string;
-  label?: string;
-  name: string;
-  placeholder?: string;
-  type?: string;
-  onChange?: (e: ChangeEvent) => void;
-}
-
 const TextInput = ({
   id,
   label,
@@ -20,12 +10,12 @@ const TextInput = ({
   placeholder,
   type,
   defaultValue,
-  required,
   onChange,
+  register,
   ...rest
 }) => (
   <div className="text-input">
-    {label && <div className="label">{label}</div>}
+    {label && <label className="label">{label}</label>}
     <input
       className="input"
       id={id}
@@ -34,6 +24,7 @@ const TextInput = ({
       type={type}
       onChange={onChange}
       defaultValue={defaultValue}
+      ref={register || null}
       {...rest}
     />
   </div>
@@ -47,6 +38,7 @@ TextInput.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   onChange: PropTypes.func,
+  register: PropTypes.any,
 };
 
 TextInput.defaultProps = {

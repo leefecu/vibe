@@ -5,8 +5,10 @@ import TextInput from './TextInput'
 
 import * as styles from '../../../../styles/story';
 
+const mockRegister = '';
+
 export default {
-  title: 'TextInput',
+  title: 'Components | Text Input',
   component: TextInput,
 };
 
@@ -18,6 +20,7 @@ export const Default = () => (
       name="latitude"
       placeholder="Latitude"
       onChange={action('change')}
+      register={mockRegister}
     />
   </div>
 )
@@ -29,8 +32,9 @@ export const WithValue = () => (
       label="Latitude"
       name="latitude"
       placeholder="Latitude"
-      value="-36.745393"
+      defaultValue="-36.745393"
       onChange={action('change')}
+      register={mockRegister}
     />
   </div>
 );

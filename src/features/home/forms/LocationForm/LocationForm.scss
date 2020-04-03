@@ -1,0 +1,27 @@
+@import '../../../../styles/global';
+
+.location-form {
+  .form-row {
+    margin: 20px 0;
+    &.two-column-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .form-column {
+      flex: 1;
+      padding-right: 5px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  label {
+    color: $text-input-label-color;
+    font-size: $input-label-size;
+    margin-bottom: 5px;
+  }
+
+}
