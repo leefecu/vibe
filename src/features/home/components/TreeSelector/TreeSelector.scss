@@ -1,0 +1,51 @@
+@import '../../../../styles/global';
+
+.tree-selector {
+  font-size: 14px;
+  width: 100%;
+  .control-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .tree-parent-row {
+    background-color: $grey4;
+    padding: 10px 10px 10px 40px;
+    margin: 3px 0;
+    position: relative;
+  }
+  .tree-children {
+    display: none;
+    .tree-child-row {
+      background-color: $grey2;
+      padding: 10px 10px 10px 60px;
+      margin: 3px 0;
+    }
+    &.expand {
+      display: block;
+    }
+  }
+
+  .toggle-button {
+    color: $grey4;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border: 0;
+    border-radius: 3px;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../../../styles/global';
+
+.checkbox {
+  font-size: 15px;
+  position: relative;
+
+  .input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .check {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: $white;
+    border: 0;
+    border-radius: 3px;;
+  }
+
+  label {
+    position: absolute;
+    z-index: 10;
+    padding-left: 30px;
+    top: 0px;
+    cursor: pointer;
+  }
+
+  &.checked {
+    .check {
+      background-color: $dark-blue;
+      border-color: $grey4;
+    }
+  }
+}

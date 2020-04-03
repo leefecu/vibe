@@ -1,6 +1,17 @@
 @import '../../../../styles/global';
 
 .location-form {
+  .toggle-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $grey6;
+    font-size: 13px;
+    font-weight: bold;
+    .toggle-switch {
+      margin-right: 10px;
+    }
+  }
   .form-row {
     margin: 20px 0;
     &.two-column-row {
@@ -18,10 +29,14 @@
     }
   }
 
-  label {
+  .label {
     color: $text-input-label-color;
     font-size: $input-label-size;
     margin-bottom: 5px;
+  }
+  .multi-line {
+    border-bottom: 2px solid $grey3;
+    padding: 5px 0;
   }
 
 }
